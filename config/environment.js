@@ -17,6 +17,16 @@ module.exports = function(environment) {
       }
     },
 
+    firebase: {
+      apiKey: "AIzaSyBz4RB5KOPUdOIuLZ-cWSEevjR85fXy59w",
+      authDomain: "campaign-manager-f6e36.firebaseapp.com",
+      databaseURL: "https://campaign-manager-f6e36.firebaseio.com",
+      storageBucket: "campaign-manager-f6e36.appspot.com",
+      messagingSenderId: "847867785435"
+    },
+
+    torii: { sessionServiceName: 'session' },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

@@ -1,0 +1,35 @@
+<div class="container-fluid">
+   <form action="" method="" class="register-form">
+     <div class="page-header">
+       <h1 class="form-name">Sign In</h1>
+     </div>
+      <div class="row">
+           <div class="col-md-4 col-sm-4 col-lg-4">
+              <label for="email">EMAIL</label>
+               {{input value=email class="form-control" type="text" placeholder="Email Address"}}
+           </div>
+      </div>
+      <div class="row">
+           <div class="col-md-4 col-sm-4 col-lg-4">
+              <label for="password">PASSWORD</label>
+               {{input value=password class="form-control" type="password" placeholder="Password"}}
+           </div>
+      </div>
+      {{#if session.isWorking}}
+      <div class="row">
+           <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+             <button class="btn btn-default regbutton" disabled='disabled'>Signing In...</button>
+          </div>
+      </div>
+      {{else}}
+      <hr>
+      <div class="row">
+           <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+             <button class="btn btn-default regbutton" {{action 'signIn' 'password'}}>Sign In</button>
+          </div>
+      </div>
+      {{/if}}
+    </form>
+</div>
+
+{{outlet}}

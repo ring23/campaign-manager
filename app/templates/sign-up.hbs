@@ -1,0 +1,33 @@
+<div class="container-fluid">
+	 <form action="" method="" class="register-form">
+		 <div class="page-header">
+		 	<h1 class="form-name">Sign Up</h1>
+		 </div>
+      <div class="row">
+           <div class="col-md-4 col-sm-4 col-lg-4">
+              <label for="firstName">NAME</label>
+               {{input vaue=name class="form-control" type="text" placeholder="Full Name"}}
+           </div>
+      </div>
+      <div class="row">
+           <div class="col-md-4 col-sm-4 col-lg-4">
+              <label for="email">EMAIL</label>
+               {{input value=email class="form-control" type="text" placeholder="Email Address"}}
+           </div>
+      </div>
+      <div class="row">
+           <div class="col-md-4 col-sm-4 col-lg-4">
+              <label for="password">PASSWORD</label>
+               {{input value=password class="form-control" type="password" placeholder="Pass"}}
+           </div>
+      </div>
+      <hr>
+      <div class="row">
+           <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+             <button class="btn btn-default regbutton" {{action 'signUp' email password name}}>Register</button>
+          </div>
+      </div>
+    </form>
+</div>
+
+{{outlet}}
